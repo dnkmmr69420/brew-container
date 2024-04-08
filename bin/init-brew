@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo mkdir -p /home/linuxbrew
+sudo mkdir -p $
+sudo mount --bind $HOME/.local/share/linuxbrew /home/linuxbrew
