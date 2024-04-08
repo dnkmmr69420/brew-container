@@ -1,9 +1,9 @@
 #!/bin/bash
 sudo mkdir -p /home/linuxbrew
-sudo mkdir -p $
-sudo mount --bind $HOME/.local/share/linuxbrew /home/linuxbrew
+sudo mkdir -p $HOME/.local/share/clinuxbrew
+sudo mount --bind $HOME/.local/share/clinuxbrew /home/linuxbrew
 
 if test ! -f /home/linuxbrew/.linuxbrew/bin/brew; then
+    echo "Installing brew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/brew-container/main/profile.d/brew.sh
 fi
