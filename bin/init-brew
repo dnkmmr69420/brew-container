@@ -5,5 +5,6 @@ sudo mount --bind $HOME/.local/share/clinuxbrew /home/linuxbrew
 
 if test ! -f /home/linuxbrew/.linuxbrew/bin/brew; then
     echo "Installing brew..."
+    export NONINTERACTIVE=1
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
