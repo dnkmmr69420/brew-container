@@ -1,3 +1,5 @@
+Also check out [Brew User](https://github.com/dnkmmr69420/brew-user/tree/main)
+
 # Brew Container
 
 A distrobox (docker) image that is used for homebrew. The `/home/linuxbrew` will be mounted to a directory in ~/ so it will be safe if you regenerate or delete the container.
