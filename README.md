@@ -9,3 +9,9 @@ Install distrobox if you don't havw it first then run this command
 ```bash
 distrobox create -i ghcr.io/dnkmmr69420/brew:latest -n brew-container -p
 ```
+
+### Installation with custom home
+
+```bash
+distrobox create -i ghcr.io/dnkmmr69420/brew:latest -n brew-container-custom-home -p -H ~/brew-container
+```
