@@ -1,6 +1,7 @@
 #!/bin/bash
+mkdir -p $HOME/.local/share/clinuxbrew
+mkdir -p $HOME/.local/share/clinuxbrew/exports/bin
 sudo mkdir -p /home/linuxbrew
-sudo mkdir -p $HOME/.local/share/clinuxbrew
 sudo mount --bind $HOME/.local/share/clinuxbrew /home/linuxbrew
 
 if test ! -f /home/linuxbrew/.linuxbrew/bin/brew; then
