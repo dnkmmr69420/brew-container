@@ -10,9 +10,9 @@ if test ! -f /home/linuxbrew/.linuxbrew/bin/brew; then
     sudo chown $USER:$USER /home/linuxbrew
 fi
 
-[ -f /run/host/usr/bin/docker ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker || rm -f /usr/local/bin/docker
-[ -f /run/host/usr/bin/flatpak ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak || rm -f /usr/local/bin/flatpak
-[ -f /run/host/usr/bin/podman ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman || rm -f /usr/local/bin/podman
-[ -f /run/host/usr/bin/rpm-ostree ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree || rm -f /usr/local/bin/rpm-ostree
-[ -f /run/host/usr/bin/transactional-update ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update || rm -f /usr/local/bin/transactional-update
-[ -f /run/host/usr/bin/ujust ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust || rm -f /usr/local/bin/ujust
+[ -f /run/host/usr/bin/docker ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker || sudo rm -f /usr/local/bin/docker
+[ -f /run/host/usr/bin/flatpak ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak || sudo rm -f /usr/local/bin/flatpak
+[ -f /run/host/usr/bin/podman ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman || sudo rm -f /usr/local/bin/podman
+[ -f /run/host/usr/bin/rpm-ostree ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree || sudo rm -f /usr/local/bin/rpm-ostree
+[ -f /run/host/usr/bin/transactional-update ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update || sudo rm -f /usr/local/bin/transactional-update
+[ -f /run/host/usr/bin/ujust ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust || sudo rm -f /usr/local/bin/ujust
