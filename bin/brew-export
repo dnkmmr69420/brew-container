@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Initialize variables with default values
+binpath=/home/linuxbrew/.linuxbrew/bin
+
+# Parse flags
+while getopts ":vi:o:" opt; do
+    case ${opt} in
+        s )
+            brewpath=/home/linuxbrew/.linuxbrew/sbin
+            ;;
+        R )
+            root=true
+            ;;
+        \? )
+            echo "Invalid option: $OPTARG" 1>&2
+            exit 1
+            ;;
+        : )
+            echo "Option -$OPTARG requires an argument" 1>&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+bin=$1
+
+if [ "$root" = "true" ]; then
+    distrobox-export --bin $brewpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
+else
+    distrobox-export --bin $brewpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
+fi
