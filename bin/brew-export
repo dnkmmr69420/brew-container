@@ -4,7 +4,7 @@
 binpath=/home/linuxbrew/.linuxbrew/bin
 
 # Parse flags
-while getopts ":vi:o:" opt; do
+while getopts ":sr" opt; do
     case ${opt} in
         s )
             binpath=/home/linuxbrew/.linuxbrew/sbin
