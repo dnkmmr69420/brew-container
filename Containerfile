@@ -11,7 +11,8 @@ RUN      dnf install -y patchelf make gcc file bash-completion bc bzip2 cracklib
 
 
 COPY      ./bin/init-brew /usr/local/bin
+COPY      ./bin/brew-export /usr/local/bin
 COPY      ./profile.d/brew.sh /etc/profile.d
 RUN      chmod +x /usr/local/bin/init-brew
-
+RUN      chmod +x /usr/local/bin/brew-export
      
