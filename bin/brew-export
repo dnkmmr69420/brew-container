@@ -7,9 +7,9 @@ binpath=/home/linuxbrew/.linuxbrew/bin
 while getopts ":vi:o:" opt; do
     case ${opt} in
         s )
-            brewpath=/home/linuxbrew/.linuxbrew/sbin
+            binpath=/home/linuxbrew/.linuxbrew/sbin
             ;;
-        R )
+        r )
             root=true
             ;;
         \? )
@@ -27,7 +27,7 @@ shift $((OPTIND -1))
 bin=$1
 
 if [ "$root" = "true" ]; then
-    distrobox-export --bin $brewpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
+    distrobox-export --bin $binpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
 else
-    distrobox-export --bin $brewpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
+    distrobox-export --bin $binpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
 fi
