@@ -1,5 +1,5 @@
 [Unit]
-Description=Homebrew Distrobox
+Description=Runs distrobox brew container at start
 
 [Service]
 Type=oneshot
