@@ -1,0 +1,7 @@
+[Unit]
+Description=Homebrew Distrobox
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/distrobox enter brew-container
+RemainAfterExit=true
