@@ -26,8 +26,18 @@ shift $((OPTIND -1))
 
 bin=$1
 
+if [ "$#" -eq 0 ]; then
+    echo "No arguments provided."
+    exit 1
+fi
+
+if test ! -f $binpath/$bin; then
+    echo "$bin not found"
+    exit 1
+fi
+
 if [ "$root" = "true" ]; then
-    distrobox-export --bin $binpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
+    distrobox-export --bin $binpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin --sudo
 else
     distrobox-export --bin $binpath/$bin --export-path $HOME/.local/share/clinuxbrew/exports/bin
 fi
