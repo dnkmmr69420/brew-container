@@ -5,3 +5,6 @@ Description=Runs distrobox brew container at start
 Type=oneshot
 ExecStart=/usr/bin/distrobox enter brew-container
 RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
