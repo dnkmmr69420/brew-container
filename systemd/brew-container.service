@@ -3,7 +3,7 @@ Description=Runs distrobox brew container at start
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/distrobox enter brew-container
+ExecStart=/usr/bin/env distrobox enter brew-container
 RemainAfterExit=true
 
 [Install]
