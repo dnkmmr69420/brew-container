@@ -11,6 +11,7 @@ RUN      dnf install -y patchelf make gcc file bash-completion bc bzip2 cracklib
 
 RUN      rm -rf /etc/sudoers
 COPY      ./config/sudoers /etc/sudoers
+RUN      chmod 0000 /etc/sudoers
 
 RUN      mkdir -p /usr/local/lib/cbrew
 COPY      ./bin/init-brew /usr/local/bin
@@ -21,3 +22,4 @@ RUN      chmod +x /usr/local/bin/init-brew
 RUN      chmod +x /usr/local/bin/brew-export
      
 RUN      ln -sf /home/linuxbrew/.linuxbrew /brew
+RUN      ln -sf /home/linuxbrew/.linuxbrew /var/lib/brew
