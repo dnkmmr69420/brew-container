@@ -5,5 +5,5 @@ sudo mount --bind $HOME/.local/share/clinuxbrew /home/linuxbrew
 
 if test ! -f /etc/brew-inited; then
     /usr/local/bin/reload-init
-    touch /etc/brew-inited
+    sudo touch /etc/brew-inited
 fi
