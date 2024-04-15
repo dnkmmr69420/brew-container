@@ -15,10 +15,12 @@ RUN      chmod 0000 /etc/sudoers
 
 RUN      mkdir -p /usr/local/lib/cbrew
 COPY      ./bin/init-brew /usr/local/bin
+COPY      ./bin/reload-init /usr/local/bin
 COPY      ./bin/brew-export /usr/local/bin
 COPY      ./profile.d/brew.sh /etc/profile.d
 COPY      ./systemd/brew-container.service /usr/local/lib/cbrew
 RUN      chmod +x /usr/local/bin/init-brew
+RUN      chmod +x /usr/local/bin/reload-init
 RUN      chmod +x /usr/local/bin/brew-export
      
 RUN      ln -sf /home/linuxbrew/.linuxbrew /brew
