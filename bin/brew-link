@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Initialize variables with default values
+binpath=$HOME/.local/share/clinuxbrew/.linuxbrew/bin
+
+# Parse flags
+while getopts ":s" opt; do
+    case ${opt} in
+        s )
+            binpath=$HOME/.local/share/clinuxbrew/.linuxbrew/sbin
+            ;;
+        \? )
+            echo "Invalid option: $OPTARG" 1>&2
+            exit 1
+            ;;
+        : )
+            echo "Option -$OPTARG requires an argument" 1>&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+bin=$1
+
+if [ "$#" -eq 0 ]; then
+    echo "No arguments provided."
+    exit 1
+fi
+
+if test ! -f $binpath/$bin; then
+    echo "$bin not found"
+    exit 1
+fi
+
+if test -f $HOME/.local/share/clinuxbrew/.linuxbrew/exports/bin/$bin; then
+    echo "$bin has already been linked"
+    exit 1
+fi
+
+ln -s $binpath/$bin $HOME/.local/share/clinuxbrew/.linuxbrew/exports/bin/$bin
