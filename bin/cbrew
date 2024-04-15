@@ -1,3 +1,0 @@
-#!/bin/bash
-ARGS=$@
-/home/linuxbrew/.linuxbrew/bin/brew $ARGS
