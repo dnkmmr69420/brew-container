@@ -17,3 +17,11 @@ distrobox create -i ghcr.io/dnkmmr69420/brew:latest -n brew-container -p
 ```bash
 distrobox create -i ghcr.io/dnkmmr69420/brew:latest -n brew-container-custom-home -p -H ~/brew-container
 ```
+
+## Adding the bin path
+
+Simply put this in your .bashrc file
+
+```bash
+export PATH="$HOME/.local/share/clinuxbrew/exports/bin:$PATH"
+```
