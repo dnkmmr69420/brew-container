@@ -26,7 +26,9 @@ fi
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrew
 cp /usr/local/lib/cbrew/cbrewsh $HOME/.local/share/clinuxbrew/exports/bin
+cp /usr/local/lib/cbrew/regen-cbrew $HOME/.local/share/clinuxbrew/exports/bin
 chmod +x $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
+chmod +x $HOME/.local/share/clinuxbrew/exports/bin/regen-cbrew
 distrobox-export --bin /home/linuxbrew/.linuxbrew/bin/brew --export-path $HOME/.local/share/clinuxbrew/exports/bin
 mv $HOME/.local/share/clinuxbrew/exports/bin/brew $HOME/.local/share/clinuxbrew/exports/bin/cbrew
 
