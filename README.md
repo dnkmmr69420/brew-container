@@ -39,7 +39,7 @@ export PATH="$HOME/.local/share/clinuxbrew/exports/bin:$PATH"
 
 - cbrew: runs brew in container
 - cbrewsh: shorter version of `distrobox enter brew-container`
-- regen-cbres: Deletes and recreats the container. Note: Brew and its installed programs will be safe since it is stored at `~/.local/share/clinuxbrew`
+- regen-cbres: Deletes and recreats the container. Useful for updating the container. Note: Brew and its installed programs will be safe since it is stored at `~/.local/share/clinuxbrew`
 
 # Dependencies
 
