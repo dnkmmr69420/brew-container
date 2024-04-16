@@ -23,4 +23,8 @@ fi
 [ -f /run/host/usr/bin/transactional-update ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update || sudo rm -f /usr/local/bin/transactional-update
 [ -f /run/host/usr/bin/ujust ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust || sudo rm -f /usr/local/bin/ujust
 
+rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
+cp /usr/local/lib/cbrew/cbrewsh $HOME/.local/share/clinuxbrew/exports/bin
+chmod +x $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
+
 echo 'Initing Homebrew should now be complete'
