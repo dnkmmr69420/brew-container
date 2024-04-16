@@ -20,10 +20,12 @@ COPY      ./bin/brew-export /usr/local/bin
 COPY      ./bin/brew-link /usr/local/bin
 COPY      ./profile.d/brew.sh /etc/profile.d
 COPY      ./systemd/brew-container.service /usr/local/lib/cbrew
+COPY      ./hbin/cbrewsh /usr/local/lib/cbrew
 RUN      chmod +x /usr/local/bin/init-brew
 RUN      chmod +x /usr/local/bin/reload-init
 RUN      chmod +x /usr/local/bin/brew-export
 RUN      chmod +x /usr/local/bin/brew-link
+RUN      chmod +x /usr/local/lib/cbrew/cbrewsh
      
 RUN      ln -sf /home/linuxbrew/.linuxbrew /brew
 RUN      ln -sf /home/linuxbrew/.linuxbrew /var/lib/brew
