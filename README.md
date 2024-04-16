@@ -47,4 +47,4 @@ These need be be on the host in order for this program to work
 
 - Bash (should be preinstalled on nearly every single linux distro)
 - [Distrobox](https://github.com/89luca89/distrobox)
-- A container mamagement tool either [Docker](https://www.docker.com), [Podman](https://podman.io/), or [lilipod](https://github.com/89luca89/lilipod).
+- A container mamagement tool either [Docker](https://www.docker.com), [Podman](https://podman.io/), or [lilipod](https://github.com/89luca89/lilipod) (tested on podman).
