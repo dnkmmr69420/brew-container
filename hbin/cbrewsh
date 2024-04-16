@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ARGS="$@"
+
+distrobox enter brew-container -- $@
