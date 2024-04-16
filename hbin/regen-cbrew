@@ -2,4 +2,4 @@
 
 distrobox rm -f brew-container
 distrobox create -i ghcr.io/dnkmmr69420/brew:latest -n brew-container -p
-distrobox enter brew
+distrobox enter brew-container
