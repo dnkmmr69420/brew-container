@@ -21,11 +21,16 @@ COPY      ./bin/brew-link /usr/local/bin
 COPY      ./profile.d/brew.sh /etc/profile.d
 COPY      ./systemd/brew-container.service /usr/local/lib/cbrew
 COPY      ./hbin/cbrewsh /usr/local/lib/cbrew
+COPY      ./hbin/regen-cbrew /usr/local/lib/cbrew
 RUN      chmod +x /usr/local/bin/init-brew
 RUN      chmod +x /usr/local/bin/reload-init
 RUN      chmod +x /usr/local/bin/brew-export
 RUN      chmod +x /usr/local/bin/brew-link
 RUN      chmod +x /usr/local/lib/cbrew/cbrewsh
+RUN      chmod +x /usr/local/lib/cbrew/regen-cbrew
+
+RUN      rm -rf /usr/local/sbin
+RUN      ln -sf /usr/local/bin /usr/local/sbin
      
 RUN      ln -sf /home/linuxbrew/.linuxbrew /brew
 RUN      ln -sf /home/linuxbrew/.linuxbrew /var/lib/brew
