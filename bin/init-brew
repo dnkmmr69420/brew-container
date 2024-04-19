@@ -4,6 +4,6 @@ sudo mkdir -p /home/linuxbrew
 sudo mount --bind $HOME/.local/share/clinuxbrew /home/linuxbrew
 
 if test ! -f /etc/brew-inited; then
-    /usr/local/bin/reload-init
+    /usr/bin/reload-init
     sudo touch /etc/brew-inited
 fi
