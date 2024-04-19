@@ -13,24 +13,24 @@ RUN      rm -rf /etc/sudoers
 COPY      ./config/sudoers /etc/sudoers
 RUN      chmod 0000 /etc/sudoers
 
-RUN      mkdir -p /usr/local/lib/cbrew
-COPY      ./bin/init-brew /usr/local/bin
-COPY      ./bin/reload-init /usr/local/bin
-COPY      ./bin/brew-export /usr/local/bin
-COPY      ./bin/brew-link /usr/local/bin
+RUN      mkdir -p /usr/lib/cbrew
+COPY      ./bin/init-brew /usr/bin
+COPY      ./bin/reload-init /usr/bin
+COPY      ./bin/brew-export /usr/bin
+COPY      ./bin/brew-link /usr/bin
 COPY      ./profile.d/brew.sh /etc/profile.d
-COPY      ./systemd/brew-container.service /usr/local/lib/cbrew
-COPY      ./hbin/cbrewsh /usr/local/lib/cbrew
-COPY      ./hbin/regen-cbrew /usr/local/lib/cbrew
-RUN      chmod +x /usr/local/bin/init-brew
-RUN      chmod +x /usr/local/bin/reload-init
-RUN      chmod +x /usr/local/bin/brew-export
-RUN      chmod +x /usr/local/bin/brew-link
-RUN      chmod +x /usr/local/lib/cbrew/cbrewsh
-RUN      chmod +x /usr/local/lib/cbrew/regen-cbrew
+COPY      ./systemd/brew-container.service /usr/lib/cbrew
+COPY      ./hbin/cbrewsh /usr/lib/cbrew
+COPY      ./hbin/regen-cbrew /usr/lib/cbrew
+RUN      chmod +x /usr/bin/init-brew
+RUN      chmod +x /usr/bin/reload-init
+RUN      chmod +x /usr/bin/brew-export
+RUN      chmod +x /usr/bin/brew-link
+RUN      chmod +x /usr/lib/cbrew/cbrewsh
+RUN      chmod +x /usr/lib/cbrew/regen-cbrew
 
 RUN      rm -rf /usr/local/sbin
 RUN      ln -sf /usr/local/bin /usr/local/sbin
      
-RUN      ln -sf /home/linuxbrew/.linuxbrew /brew
-RUN      ln -sf /home/linuxbrew/.linuxbrew /var/lib/brew
+RUN      ln -sf home/linuxbrew/.linuxbrew /brew
+RUN      ln -sf home/linuxbrew/.linuxbrew /var/lib/brew
