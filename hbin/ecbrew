@@ -2,4 +2,4 @@
 
 ARGS=$@
 
-distrobox enter -- $ARGS
+distrobox enter brew-container -- $ARGS
