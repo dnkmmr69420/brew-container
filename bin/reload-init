@@ -12,7 +12,7 @@ fi
 
 if test ! -f "$HOME/.config/systemd/user/brew-container.service"; then
     mkdir -p "$HOME/.config/systemd/user"
-    cp /usr/local/lib/cbrew/brew-container.service "$HOME/.config/systemd/user/brew-container.service"
+    cp /usr/lib/cbrew/brew-container.service "$HOME/.config/systemd/user/brew-container.service"
     distrobox-host-exec -Y systemctl enable --user --now brew-container.service
 fi
 
