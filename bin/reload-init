@@ -16,17 +16,17 @@ if test ! -f "$HOME/.config/systemd/user/brew-container.service"; then
     distrobox-host-exec -Y systemctl enable --user --now brew-container.service
 fi
 
-[ -f /run/host/usr/bin/docker ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker || sudo rm -f /usr/local/bin/docker
-[ -f /run/host/usr/bin/flatpak ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak || sudo rm -f /usr/local/bin/flatpak
-[ -f /run/host/usr/bin/podman ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman || sudo rm -f /usr/local/bin/podman
-[ -f /run/host/usr/bin/rpm-ostree ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree || sudo rm -f /usr/local/bin/rpm-ostree
-[ -f /run/host/usr/bin/transactional-update ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update || sudo rm -f /usr/local/bin/transactional-update
-[ -f /run/host/usr/bin/ujust ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust || sudo rm -f /usr/local/bin/ujust
+[ -f /run/host/usr/bin/docker ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/docker || sudo rm -f /usr/bin/docker
+[ -f /run/host/usr/bin/flatpak ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/flatpak || sudo rm -f /usr/bin/flatpak
+[ -f /run/host/usr/bin/podman ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/podman || sudo rm -f /usr/bin/podman
+[ -f /run/host/usr/bin/rpm-ostree ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/rpm-ostree || sudo rm -f /usr/bin/rpm-ostree
+[ -f /run/host/usr/bin/transactional-update ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/transactional-update || sudo rm -f /usr/bin/transactional-update
+[ -f /run/host/usr/bin/ujust ] && sudo ln -fs /usr/bin/distrobox-host-exec /usr/bin/ujust || sudo rm -f /usr/bin/ujust
 
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrew
-cp /usr/local/lib/cbrew/cbrewsh $HOME/.local/share/clinuxbrew/exports/bin
-cp /usr/local/lib/cbrew/regen-cbrew $HOME/.local/share/clinuxbrew/exports/bin
+cp /usr/lib/cbrew/cbrewsh $HOME/.local/share/clinuxbrew/exports/bin
+cp /usr/lib/cbrew/regen-cbrew $HOME/.local/share/clinuxbrew/exports/bin
 chmod +x $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
 chmod +x $HOME/.local/share/clinuxbrew/exports/bin/regen-cbrew
 distrobox-export --bin /home/linuxbrew/.linuxbrew/bin/brew --export-path $HOME/.local/share/clinuxbrew/exports/bin
