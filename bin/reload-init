@@ -25,6 +25,8 @@ fi
 
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrewsh
 rm -f $HOME/.local/share/clinuxbrew/exports/bin/cbrew
+rm -f $HOME/.local/share/clinuxbrew/exports/bin/ecbrew
+rm -f $HOME/.local/share/clinuxbrew/exports/bin/regen-cbrew
 cp /usr/lib/cbrew/cbrewsh $HOME/.local/share/clinuxbrew/exports/bin
 cp /usr/lib/cbrew/regen-cbrew $HOME/.local/share/clinuxbrew/exports/bin
 cp /usr/lib/cbrew/ecbrew $HOME/.local/share/clinuxbrew/exports/bin
