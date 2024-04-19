@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-/usr/local/bin/init-brew
+/usr/bin/init-brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
