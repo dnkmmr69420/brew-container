@@ -22,12 +22,14 @@ COPY      ./profile.d/brew.sh /etc/profile.d
 COPY      ./systemd/brew-container.service /usr/lib/cbrew
 COPY      ./hbin/cbrewsh /usr/lib/cbrew
 COPY      ./hbin/regen-cbrew /usr/lib/cbrew
+COPY      ./hbin/ecbrew /usr/lib/cbrew
 RUN      chmod +x /usr/bin/init-brew
 RUN      chmod +x /usr/bin/reload-init
 RUN      chmod +x /usr/bin/brew-export
 RUN      chmod +x /usr/bin/brew-link
 RUN      chmod +x /usr/lib/cbrew/cbrewsh
 RUN      chmod +x /usr/lib/cbrew/regen-cbrew
+RUN      chmod +x /usr/lib/cbrew/ecbrew
 
 RUN      rm -rf /usr/local/sbin
 RUN      ln -sf /usr/local/bin /usr/local/sbin
