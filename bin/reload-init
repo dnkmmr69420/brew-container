@@ -35,5 +35,6 @@ chmod +x $HOME/.local/share/clinuxbrew/exports/bin/regen-cbrew
 chmod +x $HOME/.local/share/clinuxbrew/exports/bin/ecbrew
 distrobox-export --bin /home/linuxbrew/.linuxbrew/bin/brew --export-path $HOME/.local/share/clinuxbrew/exports/bin
 mv $HOME/.local/share/clinuxbrew/exports/bin/brew $HOME/.local/share/clinuxbrew/exports/bin/cbrew
+ln -sf .linuxbrew $HOME/.local/share/clinuxbrew/brew
 
 echo 'Initing Homebrew should now be complete'
