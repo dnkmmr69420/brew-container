@@ -34,6 +34,7 @@ export PATH="$HOME/.local/share/clinuxbrew/exports/bin:$PATH"
 - reload-init Installs homebrew if not installed and does some other things as well.
 - brew-export: Like `distrobox-export` but makes it easy to export brew bins on the host. -s flag uses brews sbin instead of bin and -r flag makes the exported bin ran as root in the container.
 - brew-link: symlinks something in the bin dir to exports/bin. Only works good with certain programs
+- [patchelf](https://github.com/NixOS/patchelf) A utility program for modifying existing executables. I also am not the creator of this command.
 
 ## On host
 
