@@ -36,3 +36,4 @@ RUN      ln -sf /usr/local/bin /usr/local/sbin
      
 RUN      ln -sf home/linuxbrew/.linuxbrew /brew
 RUN      ln -sf home/linuxbrew/.linuxbrew /var/lib/brew
+RUN      ln -sf run/host/home/linuxbrew/.linuxbrew /hbrew
