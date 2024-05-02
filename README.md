@@ -43,6 +43,13 @@ export PATH="$HOME/.local/share/clinuxbrew/exports/bin:$PATH"
 - regen-cbrew: Deletes and recreats the container. Useful for updating the container. Note: Brew and its installed programs will be safe since it is stored at `~/.local/share/clinuxbrew`
 - ecbrew: runs commands in the brew container
 
+# Symlinks
+
+There are a few symlinks that are created
+
+- /brew A symlink to `/home/linuxbrew/.linuxbrew` for ease to cd in
+- /hbrew A symlink to the hosts brew which is `/run/host/home/linuxbrew/.linuxbrew` for it to be easier to cd in
+
 # Dependencies
 
 These need be be on the host in order for this program to work
