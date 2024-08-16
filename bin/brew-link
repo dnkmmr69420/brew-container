@@ -33,9 +33,9 @@ if test ! -f $binpath/$bin; then
     exit 1
 fi
 
-if test -f $HOME/.local/share/clinuxbrew/.linuxbrew/exports/bin/$bin; then
+if test -f $HOME/.local/share/clinuxbrew/exports/bin/$bin; then
     echo "$bin has already been linked"
     exit 1
 fi
 
-ln -s $binpath/$bin $HOME/.local/share/clinuxbrew/.linuxbrew/exports/bin/$bin
+ln -s $binpath/$bin $HOME/.local/share/clinuxbrew/exports/bin/$bin
